@@ -1,60 +1,20 @@
-/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
-/// @DnDHash : 33D4B0D4
-/// @DnDArgument : "var" "global.bullet"
-if(global.bullet == 0)
-{
-	/// @DnDAction : YoYo Games.Instances.Create_Instance
-	/// @DnDVersion : 1
-	/// @DnDHash : 789FA8C9
-	/// @DnDParent : 33D4B0D4
-	/// @DnDArgument : "xpos" "11"
-	/// @DnDArgument : "xpos_relative" "1"
-	/// @DnDArgument : "ypos" "12"
-	/// @DnDArgument : "ypos_relative" "1"
-	/// @DnDArgument : "objectid" "object_playerbullet"
-	/// @DnDSaveInfo : "objectid" "76aa8bad-16cc-4fef-bd8c-47392b288fe7"
-	instance_create_layer(x + 11, y + 12, "Instances", object_playerbullet);
-
-	/// @DnDAction : YoYo Games.Common.Set_Global
-	/// @DnDVersion : 1
-	/// @DnDHash : 5C7A465B
-	/// @DnDParent : 33D4B0D4
-	/// @DnDArgument : "value" "1"
-	/// @DnDArgument : "var" "bullet"
-	global.bullet = 1;
-}
-
-/// @DnDAction : YoYo Games.Common.Else
-/// @DnDVersion : 1
-/// @DnDHash : 10191DA0
-else
-{
-	/// @DnDAction : YoYo Games.Common.If_Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 7B29E781
-	/// @DnDParent : 10191DA0
-	/// @DnDArgument : "var" "global.bullet"
-	/// @DnDArgument : "value" "1"
-	if(global.bullet == 1)
-	{
-		/// @DnDAction : YoYo Games.Instances.Create_Instance
-		/// @DnDVersion : 1
-		/// @DnDHash : 3DFADBAD
-		/// @DnDParent : 7B29E781
-		/// @DnDArgument : "xpos" "37"
-		/// @DnDArgument : "xpos_relative" "1"
-		/// @DnDArgument : "ypos" "12"
-		/// @DnDArgument : "ypos_relative" "1"
-		/// @DnDArgument : "objectid" "object_playerbullet"
-		/// @DnDSaveInfo : "objectid" "76aa8bad-16cc-4fef-bd8c-47392b288fe7"
-		instance_create_layer(x + 37, y + 12, "Instances", object_playerbullet);
-	
-		/// @DnDAction : YoYo Games.Common.Set_Global
-		/// @DnDVersion : 1
-		/// @DnDHash : 16A9B0B0
-		/// @DnDParent : 7B29E781
-		/// @DnDArgument : "var" "bullet"
-		global.bullet = 0;
-	}
-}
+/// @DnDHash : 0A904A2D
+/// @DnDArgument : "code" "// Check direction of player and fire a bullet depending on direction$(13_10)//up$(13_10)if (global.bulletdirection = 0) {$(13_10)	alarm_set(0, 1) }$(13_10)	else$(13_10)	//left$(13_10)	if (global.bulletdirection = 1) {$(13_10)	alarm_set(1, 1) }$(13_10)	else$(13_10)	//right$(13_10)	if (global.bulletdirection = 2) {$(13_10)	alarm_set(2, 1) }$(13_10)	else$(13_10)	//down$(13_10)	if (global.bulletdirection = 3) {$(13_10)	alarm_set(3, 1) }"
+// Check direction of player and fire a bullet depending on direction
+//up
+if (global.bulletdirection = 0) {
+	alarm_set(0, 1) }
+	else
+	//left
+	if (global.bulletdirection = 1) {
+	alarm_set(1, 1) }
+	else
+	//right
+	if (global.bulletdirection = 2) {
+	alarm_set(2, 1) }
+	else
+	//down
+	if (global.bulletdirection = 3) {
+	alarm_set(3, 1) }
