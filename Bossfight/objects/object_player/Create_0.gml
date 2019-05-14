@@ -17,3 +17,13 @@ image_yscale = 1;
 /// @DnDHash : 63020057
 /// @DnDArgument : "var" "bulletdirection"
 global.bulletdirection = 0;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 2D73E9BC
+/// @DnDInput : 2
+/// @DnDArgument : "expr" "3"
+/// @DnDArgument : "var" "phealth"
+/// @DnDArgument : "var_1" "bullet"
+phealth = 3;
+bullet = 0;
