@@ -15,8 +15,11 @@ image_yscale = 1;
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 63020057
+/// @DnDInput : 2
 /// @DnDArgument : "var" "bulletdirection"
+/// @DnDArgument : "var_1" "nocrash"
 global.bulletdirection = 0;
+global.nocrash = 0;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
